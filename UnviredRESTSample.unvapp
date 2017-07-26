@@ -1,0 +1,228 @@
+{
+  "Properties": {
+    "PACKAGE": "com.unvired.sample.rest",
+    "DESCRIPTION": "Unvired REST Sample",
+    "LANGUAGE": "JAVA",
+    "RELEASE_VERSION": "1.0",
+    "ID": "360dfe5c-7133-4402-9e65-17c6d5e0c50b",
+    "DATA_FORMAT": "XML",
+    "VENDOR": "Unvired",
+    "NAME": "UnviredRESTSample",
+    "VERSION": "1.0"
+  },
+  "Systems": [
+    {
+      "Properties": {
+        "PROTOCOL": "http",
+        "SERVER": "192.168.98.160",
+        "APPLICATION": "UnviredRESTSample",
+        "USER": "chymedeveloper",
+        "SERVER_ID": "SVR328782931424",
+        "DESCRIPTION": "UMP Server",
+        "AUTH_TOKEN": "ma345n9t3aeihw3qxwcxbbqdig0laqddaxrxss2d",
+        "NAMESPACE": "UNVIRED",
+        "TYPE": "ME",
+        "SYNC_PORT": "8080",
+        "PASSWORD": "",
+        "NAME": "ME"
+      },
+      "Metadata": {
+        "BusinessEntity": [
+          {
+            "NAME": "WEATHER",
+            "HEADER": "WEATHER_HEADER",
+            "ATTACHMENT": "false",
+            "SAVE": "true",
+            "TYPE": "Application"
+          }
+        ]
+      },
+      "Types": [
+        {
+          "Properties": {
+            "NAME": "WEATHER",
+            "DESCRIPTION": ""
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "",
+                "DECORATION": "",
+                "NAME": "WEATHER",
+                "TYPE": "Complex"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "DESCRIPTION": "Details",
+                    "NAME": "WEATHER_HEADER",
+                    "TYPE": "Complex"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "KEY": "true",
+                        "DESCRIPTION": "City",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "MANDATORY": "true",
+                        "NAME": "CITY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Weather",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "WEATHER_DESC",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Temperature",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "TEMPERATURE",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "DESCRIPTION": "Humidity",
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "NAME": "HUMIDITY",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Functions": [
+        {
+          "Properties": {
+            "ID": "UNVIREDRESTSAMPLE_PA_GET_WEATHER",
+            "REMOTE_ENABLE": "No",
+            "DESCRIPTION": "Get Weather",
+            "ACTION": "Get",
+            "NAME": "GET_WEATHER",
+            "TYPE": "Application"
+          },
+          "Input": [
+            "WEATHER"
+          ],
+          "Output": [
+            "WEATHER"
+          ],
+          "Interfaces": [
+            {
+              "SYSTEM": "UNVIRED_REST_SAMPLE",
+              "FUNCTION": "UNVIRED_REST_SAMPLE_REST_EXECUTE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "Unvired REST Sample",
+        "PROTOCOL": "http",
+        "SERVER": "api.openweathermap.org",
+        "PORT": "80",
+        "IMAGE": "iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAlNElEQVR42u1dZ3hU1dbO8z1KSZn0npCE9BBICAhWVKogChbkIiCkDgnSFUWKKEVQERWEa0EFUVSKBbtYrmDDcsUCeC3Xq3gtIBauBcg561vv2uecOZM+MRlkmB/7mcxk5syc/e611rvKXjtgXPuu5B++OwL8k+AH2D/8APuHH2D/8APsH36A/cMPsH8cswBXBvoB9mlwK9oV0TjjsdIPsG+BW9a2iGbFdKJtZyTS4g45VNqm6JiQaJ8HWEkqgxlUSG/2j6VDFSH00TnRdFl4ZyXJgX6Aj3rpLT6uiO7qlEa/lobQ4ZIQeXywKIWKj+9GVX6Aj25wy1k1XxGZT19cGEF6eQjpZWp8cUEEzYzJk//7shT7PMDFxxfRIz2S6XcGVyt1EBkA/85S/FyvBFbThX4JPpql95qEXPrmb+ECrH1oPL4dGUZLO2ZRWRvfZdU+C7CTx/igAtrWJ54OGlJrBxjPq3m8OzCWpob5LuEK8FXmXN62K63MzqC9o8JqgWuBzGr7e5biO3LTGeCufoCPpoAGiNWOwTEipXpp3QCbqvoDdptmx+apQIgf4KNjrC1Io/2XhIqU1geuKcW/jHXQxhM6iEr3A/wXH5DCeUysdg2JIq08pF717A5yMP3rvChamJQjqtoP8F+YWE0IKaDNJyXT/4odTQLXJFy/8fufOiWJpoR2IWc7P8B/UentSjemZtPnF0aKVJIHAENVf83u1PLMjFYjfuAHMnwN4Er7DbbS9SF108I705bTEySI0VTptYN8mEF+rV8cXRmVL9erbCHSh+Fk0wG/HEkPPPoMwJCq8nauG3MaqTprNbeQa1IVWEh35nWk7y8Os0KS5Ongz/3ExOye/I5UFVT45yS1vQIVQRTc+0RHAc2Jy6PlGZm0ODnXazHwgNa2ifPiO9H9XTqKrzkvMZcmOboI6KXGjbsB3mzpVanAdwexW2SLN8M90ksdjQyXGyWfqQim9wdH0yx2m5weSum49ip6hnuDH457BXG7lxfMq73j6ZOhUfTNiHB656w4mhHZ2SuS3KoAQ6oe75FC+0aHyvhyWCS9OyCWnjgxmW7llTyHJxGTUM6Al7Tppm7YUI1VHkg3vmdN5zQ6MMZhgUsVPJxsh8fZR5Bt2F7H+4yFoTHYv5eE0MPd63ebKmuAWmaAipQk/O8lqVm0oXsKvd0/jr66KELctUOG2YDfvfvcaHlfhRcSHa2uoh8uSqWfx4TKjYmd4xv9jSdwPwP+zfAI+oCl7kkG/PacdFFh44MLZLJMwJ3GZNYHOGwlPrf7/EjSKoNIZ7DwPQdGh9Hn50XzgoqjbWcm0pbTkunZk5Pp6ZM60LOnJNOLvZLo1T6J9N7AOPrywij6bYzymeXzfJ09TLgWJudY32//DXDFSvn34XdiEcyNz2UpTePviad/nx9F+0aGCYs/XOYC1Xw8yPe/laW5yks+d0DrhguLJJgPdqqZZKZU3aj5vJrZ7h/8iAn5jt/33sAYerRHB7olPZNmRneiSwF4W5eEm9Jtfs9EdoueOCmJfmJAdw2OEQD/npVJ8xPy6PLwLnQpS1VlYKFhMooEHDwq1VpIE4JZ6iI603VJebQqL4Ne4IXw6ZBo+pV/Dwgbvt+UUuSPy/i3TA3rQos7ZPPiTRGN9D3/brz/UJnLPGh1xL/x2gF+3wOFqXIdb4RGA1ozZAhAZjAj/ZhVUkPsVTNZL1J6bAMP88BK/5ElYfe5UfT0KYm0jN2XK6I6ycSM5Yk2fdVJTF5u6ZhN17KtrzK+E2CYAQuA2OBoX2iRQZMIYlFcl5hHK3mh4PoAeVZMHt3JPOKVMxNoz7AI+h2A8u/UKuz2vnGmvpdJ4KLkbK+VDLUyyYIKK6SXeyXQHyVNjCqVugOu7GgQaSzpP48K5cUSJWofIABkZ7va0m0SNjtTrxtgd9+0ylTDkFiYiePVQoEm2d4vng6yvdaqgtzstdZEl0zez5/DYp/mxXKhgNYO/EMq7u7UUWyu1gzf1JxEfPbXMgd9wDbzVpZYuxtjJzyV7W1svJ2ylxXGQrA/Vhj/c9oSDPbP2q8JMgRVvjIri3afE8N+tqNOFdzQwD0c5EX6Qq9EIZWVvuAHmwBfm5DLRCayWcEH3SAmX14QRWvy0+W6qNJoyPZPtNnV27MzaV1hR9rUPZUe75nCDD6FHmNmv7FbqrhvKzKzxJW7jO01QGwokILvnRpaQJu6pdG3f4uwSFRTAf6Nx/0FaaJxKgN9JNCBiZnIrtD2fnEeTYhJVBB4eK13goBQ1tZFjuy+NtwkEKrrO+TKInjljET6jBn0T6PCqLpUMWN3d8lwjWDvSxy07+JwVp0xtOXUZLo7N4MWMEEDkCoCZV+whZYGuDkth3YMiqMDY0Ndrlkj9/Mja7HrO2R7tWQ3wBthShCjB7um8mQ4mqSmTXDhRq0vSpPJFp+xfaGl2jDRsO+zY/JpdX4Gbe8fTz8wUMj/AjwBtcJl12WU8OslxqOdFIEoGaDDjcP3bu2dKNIPTVAlwBa5qXGodwQrwNp/bKCowB7r/je7cqb99ZlQpahpXrGLU7LpuxFhTVrpmOTP2Z+8KyfTIlNWTNe47tWxnUT1fnB2LP1WHKr8VzdAg2UQBttuqghjACOMEa6e4zuN96mhiB2ug+v9ckmYLJzVndIFaBMYk5RBkrH4sAj/y4tCa4A4VrO22Mb+r9O2SH0m2SATEdaZdg6ObjBHi9cPMYH5eEgMLc/IsoiUKTWIaU8KKaQ7WbI+GBxLB1m9IrQoAQpDQqkULDeUqCqWaGoG0ZX5RHN6EM0/g2hRP6LrzyK6ri/RvNOJZncjuiKPaEoqUWW0Wgj8eQGb/5br8vV/Y83zBrNoqOWqQHU/5m9yGjb/nk4Z7D7VzTPw2w7xtVZ3hv0t8mottteySWCOz56SxExSEQ6qpwjuk6HRtCw925oEi8kyuFdFdaanWCX+AJVYEWIkFRyGlPJ1xscTTc9lMBm8my8gurOU6N7xRGunEq27guihq4genqkeH7yS6P5pRGsmqPctPY/o2lOJpmUqsE2pxvXLVVHAHpbSdQUdxd6b+5tMAgaCdl/ndFHvdYH8C3OJ+Yne3zLjHYADla+KQEFdiXiTpIBp/51dkfGm5Aa6NMCS1Bx6m12kP4oNqcXElwWrcWkC0dUnEt16EdHdTgUcQFw/m8csBe59k4nuKif6+1g1bi9W444SolUVDPREHpP4b/78Lbw4ZndnoGOISgKN3+gQ7fMzq+2tTPoQWDF9b1PlQrs8wMwcpE233RvI3CdDooRseruYwGsAYzJQ2PbN8HCRBr0GwPtGhtNaloBa4DJBg0SjpMYeChRVDDs6s5Bo+QgGcJKSSkgoBkAGeCKZpxHNKGDpZJU9KaX2mJrOqryzkuCbhjLwY11AT89z2WpDbf9RinLbOFqQmGdlhExJnhxSIMTrf2Mdlh+PQM0LpyVKyNXblZterehAtuWt/rESjtRsKTrEcZEAmOwosIL7JlNGXBmEy+ViOZRUTUomunEw0epLGVio3xlKalezyr1piJJA2NaqGBehKjNIV11DImdsu8dFKdBndmV7PZBoxUiixQMMaW4v34/f8Qfbf/CAG1Ny3G0y/w12/UbfBPHf5T6ZsCFd6m3761WAARrsz4NdU1QM1wjxATgw4VnRrvCdyVCXZ2TTv1ltm5JL5QxucTtlJyGdUL2QWgB7/1QlrSBVsKHlDheoHif/jc84I4kuy1LE7Obz1aLC95c7jACMg3YwyDXVNe4DyY4vLogUtX6wOITmxOWKH1/pywDDXVqQlEMHLnFYk7l3RLiwUztpQbL8uqRc2sWEyx3c9kqV3gupnaHAxYAtnVnEwEap+HVZCw9ogCtyFQuflm7YZUOSeaFuHxBPs2LyxZxU2kwSSNev/J6vh0VIwsLZ3rvgHpGiO9woMkQgHthS8hyrZmtiDJs7nVkqVNzh0hqSezlP8topBrCG9C45l0lWfDMltalDuU+iGaD6J3Wwka8QcdeeO9UwMcZCBZjw4XedG0NvDYiVxMWR2DnhVYCrhE0X0RMnJgnxQB51blwnN9UFd+PRHilily2bC8kFEYLLA1BN1QzbCLtpBjNaDeAQm8oPUb9lfJxBvJS7tp9dt7tyM909h+O7SSrzrryOVHxcN98HWNnhbqyms+kgS/DGbmnWjZsE5VZmzN/CzTB93BKWnIls+1aNU0RKwOUx90SD9NSYfK+MYMPOh8rfEmTh+9k1JJqu4QVb0xVqbgHf0QewQUBQEbFzcAzNjOpsSS9UGzI6SBS4bTcpZ/u3ZIhLckGoFvZxgesmuY66Ja41RmltkwDCuLlnilSZHLOF7ygCQFYGSQK7ysLfd+Rk0v7RDGh5sMvuzTmBfVzD7kKCoZbxei1wQ5Qrc1m2stVVcfWDX5eN/ZOAmxWZey6KpEVMEBtq4VTpywCjBOa65By2tQUWcwboIFav9413RalKDdX89zEuVwh/I1kAFVlTQqfnkb5+DmmvP0zaGxtIe2wR0VWF6n2iSsGGa2wEx+vO8BpS71BaoxkawHT7Np2QauWWzdo0JEdQSQoiZqY5fQZg2KRL+YYB7Et94qUueAKyRO1dO+uXsquEaJYC2CjXQUx57TRXAOPyHCOZUGPyq2JIf2gmae8+SfqNzKrn9ybtrcdJf3yxECL9piGkX9ef9LsrSb9+kAJxSkfSlw0n/bZRaiGMjyV9YV/5vL5iFOk3DFYawVMpdgZLYAbk0S2KF51Pn50XRa/wIr4hNUvUuPNoB1hcBqjj2Dx6qFsK/efCCKquCqQnT+og5MqM6gBsMOfqshCX9E5IUFEk09eF3S1z1Fa7iBRNyyHt1XWkPbpQMe5Rx5H+wAzS3tzAn+tL2u7XSXtxFenPLCPtyw8FUH3NJNJ2PEfas8tJ49dpXi/S/rGatLcf52s9yP97nnT41s1Q16iBvrdTulttGLTVa30SqLoyiL6+KIIe7dmBF0GekWs+igA22TBWJyoqUdX/3qAY5fbA92WfEdJaagvbIUu085wYo6bZABhSBbcIceU7SpW6rotUgexMy1UAP7JAPb+kDen3TxdVTdf1I+2zf5J+68WsjqOo+pf9pK+8hLSX7yFt+6Okr55I2paVpDOR07beR/rGuSzZfyPtw5dIR4rRQxdMN0KTMDdQx2YxH8gkQFe2GrXhCHVG031d0qSoz9R0lX9VgO3JgcmOLrSM7c1rfeOkTAUVkZqRVfmGSQjSbU5by4Sb2Vc8cEmoUssyQREqPPjAdBWxWnCmYUfrmegqtt0br2WJ3SSJBX1GV7HF+hM3EM0+gbRP32FVzPabX6/+6XtRv9pzt5G2c6tSxwiWsDnQXnuQJXsyq+lzSPvoZVbZZ3oOsHGfqNmyq2mEXhcm5klBvlmViaTLz3zf2wfESuH/FPYuEMVryb6aAS0hsaYKgrpZxHb2mVMTac/wcLVdw1ZiiuDG+4PirKCH+dmHuqYZrpGNXPHEi/TePU4l7hub3Dk9SXvqZtKeXEra5htZKm8n/ZrT2G7nMcBvK/X8+CJW1XdKkAJ2Wdv2AGkbriadNYSOhfHYApbu0aQvOIO0F/jzKBRoRoRMN9Q0vAJ7eexlDOCnQ6NVSVGpq5QHpgl7lrb0SqQbU7Il2mfFtgOPIMCwrxWyc5DVLKuZTSek0GfnR8pmajMlqLupriBJpUFdmQAjvfZGvwR39YwUHYBFLhfShQxPU+LF07IZqNNJn3cm6dPz2VcOFpdJ++xdBrGM9LlnqERFaaC65szurIb5vfxIE5KUezU5VQoH9CsLVFVIc1wmWczBsi/LXm6EVChCsPifvUjeBPp3VttfDIugzScmS6F9edsiQ3C8DLD5g2FHp4R1plV5HdmexNAvY0PrLckxVRdKW0yAcS2oa6xq3Wm7aUSpzCoMJPJNN8cMfJgqE6+bjLrcsMeIfGHI34ECHOwxXcGAjw20BSpC1ALAe0DM3NKHdQcymg6wQ7QVgjb23RXgJUiLKoAd9RTnBUtRBOL1a9k+o9RJ4tjNlOYAT9WxuT0Eyeub0rKEQP3AduSwoY4bU11I3pfbAJ7D/uF3bK8AvgAMSUTNFJjzPVUqXWcnVKOPdwU6mEypoD+/Prad+r/4vQ534BFWFB/Y4f5/8YMjlKSai8X+OfvCcvOTHU2Q4CDaMTBW/GFzZwXsMOqza0pwvSXDY0LpQyZi8J9R8lTWpsjjbbYBnro9WE3TI/PpebazP4wKFce+sSp/069FDfINHXKleK7KqJBckpJDv4JgVahKSJnwGwYp+ws7jHIcfB5SCduJmDRsNC8EfflIJlTMtsexD8tuDk1JU9JY0t5FjvA4tq2Vx5Vr4W95XyDpiwaw7V3Edj5TLRI7gMVtXYtGJNtYTFaYtGEmjV2L0yO62MxZV6kEJWdwk/YxaUad2j6enxd7JYi7iWSN04N+1wGeBivWFabJnteDBjNu7Ie6AGYXaaxDmKRpV3DN2zKyBXhhlpjEcZFEzGIluLHkHJXjNQGuiqHqbz5hFjxISnCqv/uM9HsmMsg9mFgtJv2yTvzeCGVnsVAg3ZBc2HS8hucAle27/vBsFSCBS8R+r35VV1cCAQsAn7s8mx8jFKC4Hor6oGHEZQtuGGDWSHtHREghg7LDhVLbvaZzuktbNXWvFi86pFb/+7dwWl+EWHeh25abPw0wfhy2Tt6Rk0E/lKtwXHWJh64DtomOcdC8hDyLceMRKTYrSS8AR6mSG7hHCG6Y4UVM/JjjSfvgRdI3sK96y4VUvf9b0jfNI/3mC9glupFdoh6kg0XjPXg+JV0kXnuJfd6dr5AOtc8gap9sp+p9eyTYod8yjKp3v0rae8+S9vHr7C8Pl8Wgg5HjtX+sUaRrQR+q/uJ9dsU2kvb0re4aoS6A+X4PsIs4N7aTFfDB/d7LHMQTgO1bXzDve3ne72Z/uqyJ1ZkBTSVV+HHTIzpLK4JfS9ROOXRv1T0BmCV4vg1gZ50ARyrJBRgLersAhuSM/D8GZQoD9JaEIbXnV8iE64/MFyB1XhTajmdJXz+btPefF1cIIUma1Y393hUs/Z+yDW+nPvvKfUqal48g7UP2eW8vkeCH/th1fD32qXezj7zKSdqeXfy/YvGTq387wNccqiS5Ad/YAphVq0ofugDGLgxPAbY23/Hj633i6SppEtOCANtjquXtCmlFdrqUuP5RHtKkXXamDT5UHCqZFruKxuYvU0WT3QaDQbsBzBJ8yXHsBvWi6h/3MoBbpPZZ+/QtBdBitqXs02r/elNJ9ZrJEg1D+FJ7+V7Stt5P2n8+YIDbi83VXmLJHBWkVPTWtfzergz89Qrgp5aqRbRpPmnr58gCQSy7+rv/qN8ztk2DRMtU0fvYt50Vne9S0Xzfa7s0XUWbc4sN8l+x+3Rv5zQpXPSktiugOdEq2WXH9H1zz2SxC3+UhjS+AatcqfWbUnMsFg2Shedon0DlITYW3Y8BZtdmoQ3gcsNH5gVQ/SWrytcfYhuaJPFmbftG5Q4tG07aW4+J6qVF/Rm0AtLe3awCGI/MY4D+LRpCXz2BF8WL7I6dzCp5GAPMYF/dk9U6A7xhNr92EWnvbJb36UsvkHJbnX9T9besASYk1p3wqAPgPSwEVzDJctpI1sNFaY2SLJNgoR7tW14kT5+cRJczsS2RXZWelf402w9WfSqK6Jr4XHrp9ETp2upWt1wPyCszVX9m002Cjfre7iaJH3ySygHbbbAJMkuPvvxi0q8fzCo2VMKOCC3KpAO8JUMYzAWirlFhKZL90Ez1mYfnKLI1IZn0dVeKekYRn6jdySnMqPuzre0ti0hfPFDCn7iWbH2ZyiDfcyl/R4ThpjkadZM+GBRLE4ML3NwkBD8acpPMlOO+0WESz56XmCPM2WzYUumtSJb5ZRK0CCqg2zIzpffyD/zDqusA2nQd4CbYAx3IAyON5hbJwn6heyqVFNbK4fJ7xrRVLg3UOh7FvTFUPP4uNl6TIEY75SbBZx7T1hUMGdPGcpWUDx3kcp/KDNcKw3wf/o9rNCEAYgY6tp7pHujA32j+UjPQodfwfXecHSOx6UuDu1jquLkhy4CWSjIgSD49Il/aGX10brTaKmrbwWDGoreekWj5wRKqdBTQWwPi3QGGG3L7GKKlQ40wZXDtRL0ZhLD/baYTrUJ2h8uHLbMFLtyCGA73AIZboMNhi5bVEfhoJFS5+cQOVgVLpfTRLKR/nhVnSbBuC1Mi2/bx0CipG0cWDvPpPNKx6LrqrbA9Emr7MbbPn10QKT2ndHPD2Tjs0YkWf9rVF6OQNnZPtfWWDFZSC7WLQMfEJM+K4Xhx6LN7iotkkbNZ3VkrdHYPftTKLbfcMNUsuvZYjcbbqbTo1xdFStpUK3WPP6MRKjanjWtf2KL9OwJaOhc8ztjmiYwIdrM/e1oifYeN2eVqo/VPbKvnxOarPhXGTSzLyKZfDaJF5r6jWUVq9wJ2KnhQu6zfcDaTrk2kI5btRI1WrhAyjYmWxKJB4iqjXd9jPloRq6A/Da4EOfie5yV0MjoQKA8EadGDxWp/E+ZjL8/FC6cn0JLUbCllcnUG+otXdJhJf/xgtOeFPXl7YAz9j0GsZjV9V26GMHHTDmNXwL/MhINV0cFsdeVolQu29hY1AjDbVhCn6q92kvbPp5hQMYFaNpKq931F2rb7JYkgqcH7ppKOHYbIIF2WpV5bVUn6/Zfbvi+42Zkk3Mc7A+L43gus1CiIpWgq1mK/svmCnUW9tDqgq2urVXUEtHaZrPrhhZJOxAbof7HafrV3gpXvVM3MCqWMR6uZrACLZjdG7VxoigQHMqAjSHt7M/vJL5B+M7s7G+aShkjVtnVMloLFBdLvnaAWwNLzSZ/XW0W5kCt+aRVpr7DLdGWXRplyQwPq+YGCjm6SiBqsj86JYbMVQWsLUunq2Dyr50elL1RVmtGcq+PypK0SsixOW0sEFLxLr4tymxSz6yJbQ2d0adrklrQnfcVolfhHeHL7Iypq9dLdEm8mRN42zZdghrZrm8oRLxjAi+FFBvocXhwVUqeF4jth2h5WVppFd+jJOS8+zy1ABC21oXsH6ThUFVRoFdxV+l5dtEp817QzM5iAvDMwzlVVadrGa05RtdDO8MZrmwEw221EqqSo7ov3+Hkxac/eJtUbKN+p3rOT9JVjlNSyStYX9qPqj/jvFaymN8yXAAfN6tEsgM3oE7oQYDP4OFu/LnSil0rKdj5e+G7PTtmPeQWbRjHAL2NsB2mYsWnUZ6GgvTS44UlHbBlql20smLN+28WsBdJIWzdDynhg10Vdv7hKKij1Z25VpTsfvyEFeFLHJbXXkSrp34zC9+9GhNONKbm17vWYaumPqAzIxczofFfxu9GW6M1+8S42Xa6kUjZ7NZVsYUFg07fJiLEo8Bx2HM+xuRt+dmWscqkA8Edsr5ewz10ZbxTWN59Bv3BaEk0N7WKxZ2Thbs/KYk8hSzaj+fQO/3G2m0Zz0Tf7xtdq7I3kw96R4bau7caOfhS9w2Uq9UB1mpWYZqDCnsw3No4Ji2apl6yT2aGnOcyZXcBPz4+mBYmdXFtI0cuLNdNXFzKx7BsnIcdjBuBHeyTTAZ6c22RlG+lD/v8U9ge3nJok7ZR0e3gSIFvbNoNaLjBRzNcdfZy137dZksuL8QCblrVdOsp9mOFJ3Be68hxi4vXVhRE0Ldw7TcCPKMAS8eKx85xoqfLfMShWmomZ7gImACk2EK5arQ8BLOqn/oSfWue+34ZqrptYIvvy6UlSFmvmaeVgzDhVb2b227w1I0O2z1b5KsBmOHNyaGfpBQ1biwrCDUWptRqJo20SQp119rf0+n7g+sFFKc2Os937dJiaCqCjAVo1ayP0wH7ypCSvNQI/ghvAVZ+OaluXnf8Oj5QWwTWd/rvzMujr4RFWdor+QkM38rUfD42WwsGavx0eAZqhWhUZDPQu1lo4o8LZ3ocBRogSGRN7db/Zaedqq37J9ZnV+en0tYete70iuaUgVVHCIawYskGsbmLAUfGi2VKBGPtHhdKiDtlU5kvthGv3rVS9spA61N16ZYXSS6zS4CrZ9y1B1UGSvxgWecQl2d6/GmFH9N+wL178btjd9wbGupNEW7/odYWpvtVO2M3+tkVNdSf6dni4ZFxqnQLKTBRRIEVWbA3ReCxPz6KPzo1Rklwe4nFVYouAi/Qec4a3zoqT2jKry50BLroWbOudqLbu1NOQFEWLlYEFvqeizQYsN6dnqhxxPe7GD0y+Hj0hVba01OxXOZ+JDCYQLokZ0tS9JLXwc+GfYwHOkgCNa/McwMVr0EBmg/D6rvXF+ZGyXdROyHxGgpEye7xnMh0uD66z4yxZtipMsksoWLMnv7E1FdINf/OT84z2hibQpS0HtnU94xwl7Gl+j905tFWcFFJggWuGIefG5tM/zkhUYdYmdH1fmZ3uta53XrXBOERqx8AYVcpT2rAqxL7Z509NtnYGuNwsFbdG2/0nT0yhr4YZZAakrbz5YFtd4c1Fw9c7xMB+el60nO8g5a8GoFW2XpoL+XcgvNqU42zxf2ivZ05JksoX3+oXjT4VMez4D49oshShrgsnky1NzbG6BtgnF9K0KCmPNnRLow8Hx0qhuW618w92l8Za5xja7Hi5qsLQnUHSKHU/m4l32c6ihhn+7YQgV97W3JGBsqM7czJpN/MClN00+WgdHh+eHW0l+n2nX/Tx3WhFZqaA5snBHNi1CClFAh0FeiYDtas3tAwE+0aXeKj2XcxwEUg5ZJTHyAEczroP5dClWahDitSxmB49IUWCLKj2rLIdIWAuLJgZ7PB4omeKlOV4yux1Y48Rzjku84WzC10NwYvosR4dpEpfK/VsQrDqYd8+ZF8Z0ozm4rhe3WZAncCCLTJwY1blZghoKFd9rU8ivd0/nplsopywAsmHFOKacG+mhXapN4yIBYq8Lk5l+cQ4+q45JE/uhYnYxm4pXkkjescGt1O102/0jZNDmD11cdRpaA6RFgD9GgOEXYpWYN/tdG33k1lUpadrE12VdaSdkk51OJbdnBTWOgjTaXSc38FqG8BWmyeelTaz4pLv5c1+cdZRu0f/qSusimbG5ElGRfcIVNfGNVPN4oCMz86LpPVFqdISscI4WRsSBvVtnqNUZQfTNup7TQ3jqDzzWu1cnW+ePilZ2iBLMxkcTytH0ga7n73oAciIgqF8qbXVdIC34s/LMzPkHF2tqUy2XB1Fg6gRutIi+rWmS6o01sYGuGLjgEqo4+dPSZaBmLAZJClrU2T1uHCX0NpVJWXGgZZ4DcfnLEvPkgL9l3slSvLetL1oV7G0Y6akOncMipFe1+j8jkSC2bpCK2tcuvE+bPW5IyddCtyP+qI72ZNzYrLadlpfIMGISSOc9xP7ijhEastpieIzXhnViSraF4pklRm217SVaNm05cx4OlwZJP4qjrZBo5NHuqdKnBjuFCJMVzIJw2LAAgCBAimbw6/j+Dt0wwFpemdAvLD8w/id4wPpFTYpqKMy1T4Wg9h/bAJjiZ/Bv2t5VgY9dVISfXS2AhzHx/5h7My3AK+5jadMRcSeOTlJXEdnKx6U5YWy2SKaxFLw7lmx6pg52w2rsw/Y+WfJ/pLV9xt94+VsXbQ8nBam3Ahz49W4ek4Fl2PkE3Olu48ctVMRbKlQfB8K6vePDJcNbt9cFEH/HaYe9/JzZHt+Nw6vNk8IN89h+nZEGN2QkqW+J9C9R4n9OPeSNqrLEBYCTjSHpkKXnH/y/eIY2h/5+mh6ptXYEorH91kLoJy4vF3rRbVa/XBKTAIarSBEZ7o9v4xxiKuAo1a3nJoox+1gckDEIKEYZq1WVRN21GEXxXpmpb8Xu046cfm4hk/srGNUBBudbV02HwPbYTezdE1opC2w/fc527mOeseujUv5s7CxKPp/gu33hyzh2OO7d5Q6HRypxs8viKTFyTmtGrYM8EaCH+rw9T4J9MnQKHqd1R7AQMM0bFYDySk1DmYe1979PF9PKjQxme/LyWrBtXY1NjTqqozcyW7QXKOuuTntpUzNVW4AjgwaCCF6U8LkQMKhrZ47Odmt8PCoDlXiRgCC6RqYUmrfivrnar0K6Z78jhLHbvbBHFJb5WAyl9YiXdrdziC2kTmEKbEXaZIXGocHeC8PrFa0fTdDS9t6tHd6pU+8MO/mnFUM6X+bbSeyPS0dhKipmZw2/9xnskktIamNqepb0jPpSyZRernnud7vLw6TA6zs5xO35nz49M6G1gIYbhO2rP5W4lnMG/7si2ckSBLA2a7Iq233/QB7ROq6St0TKjKbIsWm9H5+YSTdkJrd6rv9/AC3iL0rpPXdO9DPjSTg7WcnPsGMdsIR2BzmB7g5HYCYzCGAgF4hTemjuXtIFF0bn9uq7oof4FY4kBobzhH/1hvYcoL/rylIOyLnCvoB/pMbznEg85v9Y10HXNaRZ37/7Bi6PDy/RRuf+AH2kh1GFOn6lGzaNzKsFsCaNBsLlYyONPb0S/DRaY/lMMyTk9wqSczi9ZfPiCdnYGGrZnP8AHsh2YFiAyQ37B3lvubn6Jeh2vIW+gE+2qX4ga4p9DvytCy5eHykZzKr8K4+aXePOYChgscHF9B7Z6vDtz49P5KuiDJ2F/gB9g2QQbiQosTpMCjfLW3j++AeMwDbXSezxsp5jNzzMQWwWYBwLN3zMQXwsTj8APsB9g8/wP7hB9g//AD7hx9g//AD7B9u4/8Bp5COSl0CfdAAAAAASUVORK5CYII\u003d",
+        "NAME": "UNVIRED_REST_SAMPLE",
+        "AUTHENTICATION_TYPE": "None",
+        "TYPE": "REST"
+      },
+      "Metadata": {
+        "RESTServices": [
+          {
+            "NAME": "GET_WEATHER",
+            "VERB": "GET",
+            "RESOURCE": "/data/2.5/weather",
+            "POST_QUERY": "false",
+            "VARIABLE": "false",
+            "BODY": "false",
+            "ATTACHMENT": "false",
+            "RESTParameter": [
+              {
+                "NAME": "q",
+                "VALUE": "",
+                "HEADER": "false"
+              },
+              {
+                "NAME": "APPID",
+                "VALUE": "8a1af5734b536e738f32c75e78db730e",
+                "HEADER": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "Types": [],
+      "Functions": [
+        {
+          "Properties": {
+            "DESCRIPTION": "REST Call",
+            "ACTION": "Custom",
+            "NAME": "UNVIRED_REST_SAMPLE_REST_EXECUTE",
+            "TYPE": "Application"
+          },
+          "Input": [],
+          "Output": []
+        }
+      ]
+    }
+  ],
+  "Devices": [
+    {
+      "Properties": {
+        "DESCRIPTION": "iPhone",
+        "NAME": "IPHONE",
+        "TYPE": "IPHONE"
+      }
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "iPad",
+        "NAME": "IPAD",
+        "TYPE": "IPAD"
+      }
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "Android Phone",
+        "NAME": "ANDROID_PHONE",
+        "TYPE": "ANDROID_PHONE"
+      }
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "Android Tablet",
+        "NAME": "ANDROID_TABLET",
+        "TYPE": "ANDROID_TABLET"
+      }
+    }
+  ],
+  "Mappings": [],
+  "DebugSettings": {
+    "AUTH_TOKEN": "s7gmouk1gk55q6n83skxyb9b5f6rx7v902cwsu3r",
+    "MUSRID": "testuser",
+    "FUSRID": "testandroid"
+  },
+  "Decorations": [],
+  "Events": [],
+  "Commands": [],
+  "Recipes": [],
+  "Conversations": []
+}
