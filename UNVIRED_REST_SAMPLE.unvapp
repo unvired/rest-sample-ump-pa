@@ -1,0 +1,225 @@
+{
+  "Properties": {
+    "LANGUAGE": "JAVA",
+    "DATA_FORMAT": "XML",
+    "DESCRIPTION": "Unvired Rest Sample",
+    "PACKAGE": "com.unvired.restsample",
+    "VERSION": "1.0",
+    "VENDOR": "UNVIRED",
+    "RELEASE_VERSION": "1.0",
+    "ID": "cf8bdc8c-e7ee-4c7a-b553-5588e49e2ce6",
+    "NAME": "UNVIRED_REST_SAMPLE"
+  },
+  "Attributes": [],
+  "Systems": [
+    {
+      "Properties": {
+        "NAMESPACE": "UNVIRED",
+        "AUTH_TOKEN": "qxajow2d3monf6hwurf39j2y64oeuqxdvf58zjdg",
+        "SERVER_ID": "SVR375014164761",
+        "APPLICATION": "UNVIRED_REST_SAMPLE",
+        "PROTOCOL": "https",
+        "USER": "CHYMEDEVELOPER",
+        "NAME": "ME",
+        "PASSWORD": "",
+        "DESCRIPTION": "UMP Server",
+        "SERVER": "sandbox.unvired.io",
+        "SYNC_PORT": "443",
+        "TYPE": "ME"
+      },
+      "Metadata": {
+        "BusinessEntity": [
+          {
+            "NAME": "WEATHER",
+            "HEADER": "WEATHER_HEADER",
+            "ATTACHMENT": "false",
+            "SAVE": "true",
+            "TYPE": "Application"
+          }
+        ]
+      },
+      "Types": [
+        {
+          "Properties": {
+            "NAME": "WEATHER",
+            "DESCRIPTION": ""
+          },
+          "Element": [
+            {
+              "Properties": {
+                "DESCRIPTION": "",
+                "DECORATION": "",
+                "TYPE": "Complex",
+                "NAME": "WEATHER"
+              },
+              "Element": [
+                {
+                  "Properties": {
+                    "DESCRIPTION": "Details",
+                    "TYPE": "Complex",
+                    "NAME": "WEATHER_HEADER"
+                  },
+                  "Element": [
+                    {
+                      "Properties": {
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "DESCRIPTION": "City",
+                        "MANDATORY": "true",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple",
+                        "KEY": "true",
+                        "NAME": "CITY"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "DESCRIPTION": "Weather",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple",
+                        "NAME": "WEATHER_DESC"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "DESCRIPTION": "Temperature",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple",
+                        "NAME": "TEMPERATURE"
+                      }
+                    },
+                    {
+                      "Properties": {
+                        "CLIENT_TYPE": "TEXT",
+                        "NATIVE_TYPE": "STRING",
+                        "DESCRIPTION": "Humidity",
+                        "XSD_TYPE": "STRING",
+                        "TYPE": "Simple",
+                        "NAME": "HUMIDITY"
+                      }
+                    }
+                  ],
+                  "Index": []
+                }
+              ],
+              "Index": []
+            }
+          ]
+        }
+      ],
+      "Functions": [
+        {
+          "Properties": {
+            "ACTION": "Get",
+            "DESCRIPTION": "Get Weather",
+            "REMOTE_ENABLE": "Yes",
+            "ID": "UNVIRED_REST_SAMPLE_PA_GET_WEATHER",
+            "TYPE": "Application",
+            "NAME": "GET_WEATHER"
+          },
+          "Input": [
+            "WEATHER"
+          ],
+          "Output": [
+            "WEATHER"
+          ],
+          "Interfaces": [
+            {
+              "SYSTEM": "UNVIRED_REST_SAMPLE_REST_SERVER",
+              "FUNCTION": "UNVIRED_REST_SAMPLE_REST_SERVER_REST_EXECUTE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Properties": {
+        "IMAGE": "iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xMK0KCsAAAA5HSURBVHhe5VyJV1NXGp9/aGbOacWiopVA2GRVUVBUXBG01YqtS+1U7bi0am3VVsUFtVLFGZdqqbu11Y7WjewJJGEJZl9IAtkX53d5jywvySMg68x3fseT5N173/3d77vfct/Dv7z5P5ORJBwI+J0Oj17rkElsTx5Z7jQZrzbqGuo19cc0p74HtGfrdBfOGq9dsty7aX/+1Nmm8Bj0AZfrTTBIjzACMiKEgz6fo0VquHJBdWCXvLZaUlkqmpcnLM4U5M/k56bxsqfysqYA/Oyp/LzpgoKZwhKueH6+bOUCxcdrVd9+ab7T5FZ3jRDt4SQc8Hpcqg7DlYuK2mpBIYefk8bPmsrjpvIy30sW3FSyCrlpwmKucss6U9M16DwYCNA3GA4ZBsJBr9dn7bbzXkI5kiVziQIZNIYK6L+legl2Qa9U5LPZgn4/fcu3kLcjHAx6NGp943nl1vWCIg5jusMGbqpwNrf9802W+7f9dht966HK0AnDIVke3G5dsxTWOzi7HRqypojm5ig3f2j78w8/HNtQZYiEfd2WrkP7RHOyR4NqJLip8H+aM3UBp5OeyiBl0IQDLqfl/i3pivLRphoBfs60ts9qe8VCuA96WknLYAgHg16TQX3sW3FZ/hiypZE1RbaiXHumzmsxDyqADYKwU9HSsXMrP3c6895jB0HejK6De71GAz3FJCQ5wsGAQyZuWb2YxNWYu44tEO1VB3Z7zUZ6qgNJEoSDAVe7Ul5bg5SAcbNxAsGs9wln6DkJ2x6YMHQLtox7jDtwU9u21SIbpyedWFgJB4NOeYusqmLc6jYSmKRi84deg46efAJhIwyf3LZjM0n0Y0Yfn0Bxomv8IeBmS0sSEka8VR8/hGyWMeg4h2hurvXxw6DfR9OIkYSEzfduomRjDDchIFtVYXv2hKYRI/EJI3OUrigb++xiaOCmyqoXJyoz4hCGMXcd3jdR2VLgpmrPnYibeMYQDga7f71LqgLGEBMN0mXzna0ymlSEMAl7tJrWtcsmtnr7gCilrjscW1RFEQ76vIZ/NQhR38b0n4iQVs7rFTQz0q8owj5rt3LrR/8D6qWAKlJTfzToiwpRUYTtvBeCwnRGtwkNUWmuW/OaptcnYcIBr0f1zV5GhyhkTG7mpITAvDq6CE9joJloTkPJYXcdJuzqbJcsnsNoHQYnRVCQrvh4beeXOwD5R6t5mWNm+YJZM9o+raVnsm4lP3salMFoE4J0eVmkksOEDZd/ZDlhxVr08F4G3G4EN8Df00PysDHRMydFvn4V3C81k4DDob9wTlAwk9kshOyp5js/0yRDhLGzFbXVzKb94OemIY6ThyCIW3pdr7DZ1PQTqlCWdR1BZEyWLCzufni/Vyyg6n6vQa/Y9AGLr+3cuz10mk8TdshbyGlrTFMKwqIM2x+/wb+jGzkJyJnGaDDayCC5FNSg/HQDmZXfrzn1PcsWg1WHjoEIYdDQX77Az0ljtAtBWJxpf/4ULQMe95gpNhYZxK0EvR5w1v1wikXD8NX25udUQCaE/U6H6sAulvOqMGG3S5CbcF1GGxmTBXkzAh5CWH/+NAthxFrTretUzUgIe/RaOTZw4g4DEIbCI8F+lUKiNoyvcRHRK0nCMF5N/TEURTRhh0wiqSxlNIoEC2FYuGzlwtZ1KxUbawD4T2llqSCf9pnN6ZNa11QqN9ZEQr5+pZB6EIXZc1PFZfmtHyyHy0RLyYJCXtYUSXmhonY1oxcF1LphzkkTxqWOPZ/7bFaasO3JI9G8PGajCAhLMnte/hmHcMZkVBq9Qr5Xp/WajAR6HXkyfLWRGvBV2t/tL57Sl/rhlLe0rl6Mq1iszq922F/+6dG89poMbnUXUl/ZqoWqg3v6fonqRcF8u4mX3h8LIwn/eJaNcOZ7itoar1FPE7bcaYIOGS0iISzh9jS/iEtY8XEN5kpW7dkT040rtudPEasxCf2l89Dzq2l/Q42GmOdUyrFkFLof3JEunY/uXQf3YNVx1dXV2ct/hczHb7PCwbRv32R7+pg05r1EwH8TCLg727Fw+EUHTYaCfyThS+fZEyGsIxaRJmy82hgywrgQzc1xyMRo6eu2RJ1gEsJrKMJIwvCVnzdde+Y4JgE1issLXk37Kwj77bb2nVsEedMFOdMAkhhxU5EqWB/9io7dv92XVJRgArBn+UdVxHdmTUHkQ0txaa5DLAx4va8P7eOjC/pGelbcLmcaZajm2z+Hf48HycIit6oDLQlhXUM9eRMhphEB8ueZ77asXuyzmNHS+vghL31S5NUw4doafMWP0iVzkZx4dBp8CBPevolx+imcnQUFoqMWEaVvqPC//RDN5jrEApLkH9zbzIm4bz8wN/vLZxjEpeoQzcluTn+X0SAEQQmXOrUmhOHBEiWV4gVFr4/sd0hE5PlDZ7t8Q3XUnCIII7tufv8dqE599CByMtikaHY2ZdL+3p7Xh/fLls6HPwMkC4qIDnPTsAWCAT+sxnD5omx5GVmRQRJG+/adW6EM5B7YdKr9X2D3Mdv0gT9rhlPR2k8YaUq8w2f4KpgKkg1EMLgipDV8RrMIwlBU5+5/YOo+qxUMkdbD3ug9HAh4zSZk8G41AZI2YUkWusOlu7DqSJW8XldHm7rusLCAE8l5YMJ9nk994ghsirw0ZLd3fbM3rrUiMmGXDUS4ONN49RJZP68XXgcZKZxEVJsIwohyAacD3OCE9JcaqKWhCft94AMP3MMnMDddo31kxmS4KO2ZOmTF6AvmaIaNwMukOSdDGCrFlsQccBfsI9VXO+OmjFiFMGHt2bpED1NgloiQpuuXYTNgrtq/K9Ee1pw62r5js/FKY9DjwbypgzHapHvsqn1fiErz4PwAYnWhEAJ9Zk8Rlxeq9v8T08U4WGJUf9TVgfdw+iSoFwUTEkxdw2n5hysSeV9+/kynst+kdT+eSei0gIzJlB9Cyx4BL6okjNzDtdW4vRDjtrbAS2tOfgdzoAnHc1pU98ivCFcwS4Qf0Wxi8MAAhNGdk4K9hrsjiBDrix4wEvCRrvZ+p2W8domtnsSN5+T0wm8hLNlsUaVSBGHKS8NvIVTCOLt/fwBN0oRttvbPNvI4k5pnvkODkwKbJ9GoKIMcXKS/Cx/bI+Sho+XerZCWBiSMyfh7e3F3083rzKvRkFQUh8OS5d7NRM6NAq72vHqOlvESj37CG9cQwpwU5ZZ1fkcvvBG8MRWWkIpY7t/W1h/Xnj7Wh6OKDatRcnY/vNcr4Bl/+reu4Qw5XXA5fdZuYgv941OE4UESEQ4nHo0DJB4tVYs8GjVNGHky+2Mkklq+iJ9ayjesxo6F0eIDvuJHoiv+K7hlxSdrkVqSbMlui4LNBtrCQo7+4jlHiwSVKiITBjHfvK7cVhseHEMhh3/2BL6j86svBiDcUM+eWio3r0NmShNGRJatXMBoEQm24iH/feniOdKl80idTP2IeqC8EL+QCoGTArvFZwaoJxvCgnQsNOm+hARn0j56nxOzX1gkXVoqLIqX+SZfPGRNUX29G76TJuwx6ElimLgDC+GxRNKE4ZIRiagjKkIYn1TffsnymH+iExYUccx3m6hXNQlhdDDfaWKJTIRw3xNX+A9hYUZUZBor9MUkZGzkwQI54jnJQlhcVtArJVEG0kf4zRu3Vi0sTuioBYUc6+8PECQxNMm3qLCROOiNOBCQsqbC7XUd2o/JQw2a44eYbSIgq1pEFVUQmjDIIJww2oWAcKc5+T31JA5W7dFprf95REL3mHDuS4TIqYPRAKqYkkerIQ8GEmu46+vdUFUfzxBhxO6fr7C8ZSdeUGx5cIc6msCdUDmJ5uaODWFOSmtNJUoRMhOTwd3Vqa47wlLP8/NmdD+8S5OMJOwx6FqqlzBahwEryp0uWVLauqaSHD4tms1sMIqAxUmXldEzqShh1nDRaF2/CkkBTTKSMAod3Xm2010CqDQExqVRRpIz4aaamq4R79MvYcIQJMx04fa/AnF5PpVghSSKsN9mbd/+CbuFTCDw86ajZmS8sxVFGKEZNRrxRjGdJyLIiQpKQpZXHiBI7pFnD7CTJwLgYvWXzlNxK1KYhCHIItnP5ScEZKsqqAKYIXEII7XQ1B+LKvQnGjB5w5WLJOuMkTiEIUiqlNs2xD3ZG/8A2/bdn1G1UazEJwzpFQtky8sZY00ItG2rdXWpaBoxkpAwtrv23MlwWT9BIJ6fb+e9RBZF04iRhIQhXou56+DeCbSZkTWZblwJeNw0gXjCRhgRDHWC6sAultR8/EBQmK4+cYQ8bWQVVsJ94jUbVV/vHu+RmZuqPvmdz2qhJ51YBiYMgZ7bPq1lOQMaW8AAyfOH5P4CMynCsG1nm0K5Zf04tG3sW7D1dQ+sW0qSI9wnXoNe3/jDuHp3HBmh8cZl6vw1SRkEYQiSMOvjh7KqijHPSRA7EG/tzS/YfXKsDI4wBNWW7flTWc2SMXRjVC5FsovE8TaRDJowJSiqNGdPSJfNH2VPxs9Nk61aiDw5SRcVK0MkDAl4PY4Wqfr4IWnl3FFITlDNt65bCSfi6myPfP95sDJ0wpQEnI4e/ivNqaOi+bNGysi5qZKKYl1DvatdGVvfDlbeljCRYBCFmFuj1tQfl65YMJz/rcWsGa3rq0w3r3vNJnJSk8Rfyw4ow0G4X2BpoG2++0vn3u3SZWWi0lzqvy9JVvN9r/YIizjisgJZ1SKkd92/3fdaTJFnjm8vw0k4JMFAwGPQ9/BemG/d0NQf69jzuaK2Bs5GsrBIUMKF3rAK/Nzp/IJ04ZxsmGtL1SLl5nVgqD1bZ7n7i0Mm9lm7h0WfsTIihGnpe3WbPNe3Wb1GvUfz2q3qQMbmVLQ65S0ESjm2JX70aNRekxH5A3wv9Yxv5GQkCY9DefPmv1z9elm+AU8QAAAAAElFTkSuQmCC",
+        "PORT": "80",
+        "DESCRIPTION": "Unvired Rest Sample REST Server",
+        "SERVER": "api.openweathermap.org",
+        "AUTHENTICATION_TYPE": "XML",
+        "PROTOCOL": "http",
+        "TYPE": "REST",
+        "NAME": "UNVIRED_REST_SAMPLE_REST_SERVER"
+      },
+      "Metadata": {
+        "RESTServices": [
+          {
+            "NAME": "GET_WEATHER",
+            "VERB": "GET",
+            "RESOURCE": "/data/2.5/weather",
+            "POST_QUERY": "false",
+            "VARIABLE": "false",
+            "BODY": "false",
+            "ATTACHMENT": "false",
+            "RESTParameter": [
+              {
+                "NAME": "q",
+                "VALUE": "VALUE",
+                "HEADER": "false"
+              },
+              {
+                "NAME": "APPID",
+                "VALUE": "8a1af5734b536e738f32c75e78db730e",
+                "HEADER": "false"
+              }
+            ]
+          }
+        ]
+      },
+      "Types": [],
+      "Functions": [
+        {
+          "Properties": {
+            "ACTION": "Custom",
+            "DESCRIPTION": "REST Call",
+            "ID": "UNVIRED_REST_SAMPLE_REST_SERVER_REST_EXECUTE",
+            "TYPE": "Application",
+            "NAME": "UNVIRED_REST_SAMPLE_REST_SERVER_REST_EXECUTE"
+          },
+          "Input": [],
+          "Output": []
+        }
+      ]
+    }
+  ],
+  "Devices": [
+    {
+      "Properties": {
+        "DESCRIPTION": "iPhone",
+        "TYPE": "IPHONE",
+        "NAME": "IPHONE"
+      }
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "iPad",
+        "TYPE": "IPAD",
+        "NAME": "IPAD"
+      }
+    },
+    {
+      "Properties": {
+        "DESCRIPTION": "Android Phone",
+        "TYPE": "ANDROID_PHONE",
+        "NAME": "ANDROID_PHONE"
+      }
+    }
+  ],
+  "Mappings": [],
+  "DebugSettings": {
+    "AUTH_TOKEN": "g6pwmzy6j1p5xitezcb74uvhkklwq00gm3vp0e31",
+    "FUSRID": "ragav-iphone",
+    "MUSRID": "RAGAV"
+  },
+  "Decorations": [],
+  "Events": [],
+  "Commands": [],
+  "Recipes": [],
+  "Conversations": []
+}

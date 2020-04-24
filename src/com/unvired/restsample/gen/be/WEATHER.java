@@ -1,5 +1,5 @@
-//	Generated using Unvired Modeller - Build R-4.000.0090
-package com.unvired.sample.rest.gen.be;
+//	Generated using Unvired Modeller - Build R-4.000.0120
+package com.unvired.restsample.gen.be;
 
 import java.util.ArrayList;
 

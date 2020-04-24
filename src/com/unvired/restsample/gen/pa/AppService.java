@@ -1,4 +1,4 @@
-package com.unvired.sample.rest.gen.pa;
+package com.unvired.restsample.gen.pa;
 
 import java.util.Hashtable;
 import java.util.Vector;
@@ -56,7 +56,7 @@ public abstract class AppService implements IProcessAgent {
 	*/
 	public IHTTPResponse GET_WEATHER(String q, String APPID) {
 		Hashtable<String, String> postParameters = new Hashtable<String, String>();
-		addParameter(postParameters, "q", q, "");
+		addParameter(postParameters, "q", q, "VALUE");
 		addParameter(postParameters, "APPID", APPID, "8a1af5734b536e738f32c75e78db730e");
 
 		String resource = "/data/2.5/weather";
@@ -68,7 +68,7 @@ public abstract class AppService implements IProcessAgent {
 		httpRequest.setParameters(postParameters);
 
 		IHTTPResponse httpResponse = (IHTTPResponse) process.getService().submitRequest(httpRequest,
-				Constant.UNVIRED_REST_SAMPLE_REST_EXECUTE);
+				Constant.UNVIRED_REST_SAMPLE_REST_SERVER_REST_EXECUTE);
 		return httpResponse;
 	}
 

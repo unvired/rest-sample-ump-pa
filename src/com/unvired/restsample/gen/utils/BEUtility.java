@@ -1,5 +1,5 @@
-//	Generated using Unvired Modeller - Build R-4.000.0090
-package com.unvired.sample.rest.gen.utils;
+//	Generated using Unvired Modeller - Build R-4.000.0120
+package com.unvired.restsample.gen.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 
 import com.unvired.lib.utility.BusinessEntity;
 import com.unvired.lib.utility.Structure;
-import com.unvired.sample.rest.gen.be.WEATHER;
+import com.unvired.restsample.gen.be.WEATHER;
 
 public class BEUtility
 {
